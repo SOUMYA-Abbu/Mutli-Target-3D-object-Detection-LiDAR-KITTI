@@ -30,26 +30,29 @@ Sincere thanks for the great open-source architectures mmcv, mmdet and mmdet3d, 
 **Install**
 
 pip install -r requirements.txt
+
 python setup.py install
+
 pip install .
 
 
 **[Dataset]**
-We have preprocessed dataset
+Please use the preprocessed dataset from KITTI official portal
 KITTI/
 ├── training/
-│ ├── image_2/ # RGB images
-│ ├── velodyne/ # LiDAR point clouds (.bin)
-│ ├── calib/ # Calibration files
-│ └── label_2/ # Ground-truth labels
+│ ├── image_2/
+│ ├── velodyne/
+│ ├── calib/
+│ └── label_2/
 └── testing/
 ├── image_2/
 ├── velodyne/
-├── calib/
+└── calib/
 
 **Evaluation**
 
 python test_pc.py --checkpoint path_to_model.pth
+
 python read_pkl.py pred_instances_3d.pkl
 
 
